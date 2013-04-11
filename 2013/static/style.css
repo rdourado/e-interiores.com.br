@@ -54,10 +54,14 @@
 	padding: 0;
 }
 body {
-	font: 14px/1.5em sans-serif;
+	font: 14px/20px sans-serif;
+	min-width: 990px;
 }
 hr { display: none }
+img,
+abbr { border: 0 none }
 a {
+	outline: none;
 	text-decoration: none;
 	
 	-webkit-transition: all 0.25s linear;
@@ -67,6 +71,8 @@ a {
 }
 
 /* Default */
+
+.hide { display: none }
 
 .cf:before,
 .cf:after {
@@ -79,7 +85,7 @@ a {
 /* Header */
 
 #head {
-	background: url(img/bubbles.png) no-repeat, url(img/square.png) repeat;
+	background: url(img/bubbles.png) no-repeat, url(img/square.gif) repeat;
 	background-color: #c7c7c3;
 	height: 134px;
 	position: relative;
@@ -171,15 +177,20 @@ a {
 	clear: both;
 	height: 15px;
 }
+.home .head-extra { display: none }
 
 /* Body */
 
-#body {
-	background: #fff url(img/bubbles-gray.png) no-repeat right bottom;
-}
+#body { background: #fff url(img/bubbles-gray.png) no-repeat right bottom }
 .highlight {
-	background: #000;
-	height: 425px;
+	background: url(img/bubbles.png) no-repeat, url(img/square.gif) repeat;
+	background-color: #c7c7c3;
+	background-position: 0 -134px, 0 -134px;
+	min-height: 425px;
+}
+.highlight iframe {
+	display: block;
+	margin: 0 auto;
 }
 .body-extra {
 	background: url(img/shadow-bottom.png) no-repeat center top;
@@ -187,11 +198,18 @@ a {
 	margin-bottom: -19px;
 }
 .meth-title,
-.entry-title {
+.entry-title,
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4 {
 	font: 37px 'ChampagneLimousinesRegular', sans-serif;
-	padding: 40px 0 46px;
-	text-align: center;
+	padding: 40px 0;
 	text-transform: uppercase;
+}
+.meth-title {
+	padding-bottom: 46px;
+	text-align: center;
 }
 .sequence {
 	margin: 0 auto;
@@ -218,11 +236,11 @@ a {
 	display: block;
 	font: 700 14px 'Montserrat', sans-serif;
 	left: 26px;
-	line-height: 25px;
+	line-height: 26px;
 	position: absolute;
 	text-align: center;
 	top: -9px;
-	width: 25px;
+	width: 26px;
 	z-index: 11;
 
 	-webkit-border-radius: 50%;
@@ -295,8 +313,8 @@ a {
 /* Footer */
 
 #foot {
-	background: #828180;
-	color: #fff;
+	background: #d5cfaf;
+	color: #605f5d;
 	clear: both;
 	padding: 30px 0 40px;
 	position: relative;
@@ -311,7 +329,10 @@ a {
 	position: absolute;
 	top: 30px;
 }
-.sac-number { font-size: 15px }
+.sac-number {
+	color: #888;
+	font-size: 15px;
+}
 .foot-nav {
 	margin: 0 auto;
 	padding: 0 0 0 250px;
@@ -322,12 +343,12 @@ a {
 	margin-left: -10px;
 }
 .foot-links a {
-	color: #b7b6b6;
+	color: #888;
 	margin: 0 10px;
 }
 .foot-links a:hover,
 .foot-links a:focus,
-.foot-links a:active { color: #fff }
+.foot-links a:active { color: #000 }
 #copyright {
 	font-size: 11px;
 	margin-right: -480px;
@@ -340,12 +361,12 @@ a {
 /* Pages */
 
 .board {
-	background: #000;
+	background-position: center center;
+	background-size: cover;
 	height: 181px;
 }
 .entry-title {
 	margin: 0 auto;
-	text-align: left;
 	width: 960px;
 }
 .entry-content {
@@ -353,6 +374,17 @@ a {
 	min-height: 300px;
 	width: 960px;
 }
+.entry-content p,
+.entry-content ul,
+.entry-content ol {
+	color: #555;
+	margin-bottom: 20px;
+}
+
+.page-diferenciais .board { background-image: url(img/img-diferenciais.jpg) }
+.page-como-funciona .board { background-image: url(img/img-como-funciona.jpg) }
+.page-o-que-entregamos .board { background-image: url(img/img-o-que-entregamos.jpg) }
+.page-contato .board { background-image: url(img/img-contato.jpg) }
 
 /* Diferenciais */
 
@@ -411,10 +443,10 @@ a {
 	position: relative;
 	z-index: 10;
 }
-.diff-title {
+.entry-content .diff-title {
 	font: 23px 'ChampagneLimousinesBold', sans-serif;
 	margin: 0 30px 10px;
-	padding-top: 30px;
+	padding: 30px 0 0;
 	text-transform: uppercase;
 }
 .diff-contratacao .diff-title,
@@ -511,6 +543,223 @@ a {
 .diff-suporte 		{ margin:  20px  0 0 -413px }
 .diff-tutoriais 	{ margin:  20px  -413px 0 0 }
 */
+
+/* Como Funciona */
+
+.page-como-funciona .entry-content {
+	min-height: 800px;
+	padding-right: 600px;
+	position: relative;
+	width: 360px;
+}
+
+.page-como-funciona .call-to-action {
+	float: left;
+	padding-top: 40px;
+}
+.button {
+	background: #000;
+	border: 0 none;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font: 18px/46px 'ChampagneLimousinesBold', sans-serif;
+	margin: 0;
+	padding: 0 20px;
+	text-transform: uppercase;
+	
+	-webkit-transition: all 0.25s linear;
+	   -moz-transition: all 0.25s linear;
+		 -o-transition: all 0.25s linear;
+			transition: all 0.25s linear;
+}
+.button:hover,
+.button:focus,
+.button:active {
+	-webkit-border-radius: 12px;
+			border-radius: 12px;
+	-webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+.instructions,
+.entry-content .instructions {
+	background: url(img/arrows.png) no-repeat 282px 202px;
+	height: 750px;
+	left: 340px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 620px;
+}
+.instruction,
+.entry-content .instruction {
+	background: #f6f6f6;
+	border: 2px dashed #a7a9ac;
+	height: 176px;
+	list-style: none;
+	padding: 44px 35px 0;
+	position: absolute;
+	width: 150px;
+
+	-webkit-border-radius: 50%;
+			border-radius: 50%;
+	-webkit-background-clip: padding-box; background-clip: padding-box;
+}
+.instruction-fotos {
+	left: 188px;
+	top: 0;
+}
+.instruction-planta {
+	left: 390px;
+	top: 314px;
+}
+.instruction-questionario {
+	left: 0;
+	top: 475px;
+}
+.instruction-icon {
+	bottom: -70px;
+	display: block;
+	left: 50%;
+	margin-left: -65px;
+	position: absolute;
+}
+.instruction-title,
+.entry-content .instruction-title {
+	color: #000;
+	font: 22px 'ChampagneLimousinesBold', sans-serif;
+	padding: 0 0 10px;
+}
+.instruction .number {
+	background: #000;
+	color: #fff;
+	display: block;
+	font: 33px/44px 'ChampagneLimousinesBold', sans-serif;
+	left: 180px;
+	position: absolute;
+	text-align: center;
+	top: 30px;
+	width: 44px;
+
+	-webkit-border-radius: 50%;
+			border-radius: 50%;
+	-webkit-background-clip: padding-box; background-clip: padding-box;
+}
+.instruction-text,
+.entry-content .instruction-text { font-size: 12px }
+
+/* O Que Entregamos */
+
+.products-list {
+	border-top: 1px dashed #666;
+	float: left;
+	position: relative;
+	top: 190px;
+	width: 100%
+}
+.prod-item {
+	float: left;
+	list-style: none;
+	margin: 0 0 160px;
+	padding: 0;
+	padding-left: 2%;
+	padding-right: 2%;
+	position: relative;
+	width: 21%;
+}
+.prod-icon {
+	left: 50%;
+	margin-left: -85px;
+	position: absolute;
+	top: -158px;
+	z-index: 2;
+}
+.prod-extra {
+	background: #e5e5e5;
+	height: 130px;
+	left: 50%;
+	margin-left: -65px;
+	position: absolute;
+	top: -159px;
+	width: 130px;
+	z-index: 1;
+
+	-webkit-border-radius: 50%;
+			border-radius: 50%;
+	-webkit-background-clip: padding-box; background-clip: padding-box;
+	
+	-webkit-transition: all 0.25s linear;
+	   -moz-transition: all 0.25s linear;
+		 -o-transition: all 0.25s linear;
+			transition: all 0.25s linear;
+}
+.prod-item:hover .prod-extra {
+	padding: 10px;
+	margin: -10px 0 0 -75px;
+}
+
+.prod-title,
+.entry-content .prod-title {
+	color: #000;
+	font: 22px 'ChampagneLimousinesBold', sans-serif;
+	padding: 18px 0 15px;
+}
+
+.page-o-que-entregamos .call-to-action {
+	clear: both;
+	padding: 60px 0 30px;
+	position: relative;
+	text-align: center;
+	z-index: 10;
+}
+
+
+/* Contato */
+
+fieldset {
+	border: 0 none;
+	position: relative;
+}
+legend { display: none }
+.field {
+	clear: left;
+	float: left;
+	width: 50%;
+}
+.field-mensagem {
+	clear: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+label {
+	float: left;
+	font: 22px 'ChampagneLimousinesRegular', sans-serif;
+	line-height: 30px;
+	text-align: right;
+	text-transform: uppercase;
+	width: 32%;
+}
+.text,
+.area {
+	border: 1px solid #d3d3d3;
+	float: right;
+	font-size: 14px;
+	padding: 6px;
+	width: 63%;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+.area { height: 130px }
+.field br { display: none }
+.submit {
+	clear: both;
+	text-align: right;
+}
+
 /* Keyframes */
 
 @-webkit-keyframes spin {

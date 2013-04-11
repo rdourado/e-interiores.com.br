@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<title>Como Funciona | e-Interiores</title>
 	<link rel="stylesheet" href="style.css" media="screen">
+	<!--[if lt IE 9]><link rel="stylesheet" href="ie.css" media="screen">
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body class="page-como-funciona">
 	<header id="head" class="cf">
-		<div id="logo"><a href="#"><img src="img/e-interiores.png" alt="e-Interiores" width="208" height="53"></a></div>
+		<div id="logo"><a href="index.html"><img src="img/e-interiores.png" alt="e-Interiores" width="208" height="53"></a></div>
 		<nav id="nav">
 			<ul id="menu">
 				<li class="menu-item"><a href="index.html">Home</a></li>
@@ -34,22 +36,22 @@
 			<div class="entry-content">
 				<p>O que você precisa para elaborarmos um novo ambiente para sua residência ou escritório é apenas um computador. Você nos mostra como seu ambiente é, e lhe mandamos um projeto de decoração completo para ele.</p>
 				<p>Uma nova decoração para seu ambiente - de móveis à materiais - estará a seu alcance com a distância de alguns cliques do mouse.</p>
-				<h2>O que voce precisa fazer para começar</h2>
+				<h2>O que você precisa fazer para começar</h2>
 				<p>Mande-nos fotos e plantas do ambiente, preencha nosso questionário e nós fazemos o resto.</p>
 				<p class="call-to-action"><a href="#" class="button">Comece Agora</a></p>
-				<ol class="instructions">
+				<ol class="instructions hide">
 					<li class="instruction instruction-fotos">
-						<div class="instruction-icon"></div>
+						<img src="img/camera.png" alt="" class="instruction-icon" width="130" height="105">
 						<h3 class="instruction-title"><b class="number">1</b> Fotos</h3>
 						<p class="instruction-text">Fotografe o seu ambiente em todos os ângulos para que possamos conhecer ao máximo como ele é.</p>
 					</li>
-					<li class="instruction instruction-fotos">
-						<div class="instruction-icon"></div>
+					<li class="instruction instruction-planta">
+						<img src="img/planta.png" alt="" class="instruction-icon" width="130" height="105">
 						<h3 class="instruction-title"><b class="number">2</b> Planta</h3>
 						<p class="instruction-text">Nos envie uma imagem da planta baixa do ambiente, podendo ser feita em softwares próprios ou mesmo à mão.</p>
 					</li>
-					<li class="instruction instruction-fotos">
-						<div class="instruction-icon"></div>
+					<li class="instruction instruction-questionario">
+						<img src="img/questionario.png" alt="" class="instruction-icon" width="130" height="105">
 						<h3 class="instruction-title"><b class="number">3</b> Questionário</h3>
 						<p class="instruction-text">Preencha nosso questionário, nos fornecendo informações importantes sobre seu ambiente.</p>
 					</li>
@@ -67,11 +69,15 @@
 			<h4 class="foot-title">e-Interiores</h4>
 			<p class="foot-links">
 				<a href="#">Quem somos</a> | 
-				<a href="#">Entre em contato</a> | 
+				<a href="contato.html">Entre em contato</a> | 
 				<a href="#">Termos e condições de uso</a>
 			</p>
 		</nav>
 		<p id="copyright">Copyright© Todos os direitos reservados</p>
 	</footer>
+	<!--[if !IE]> -->
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/interface.js"></script>
+	<!-- <![endif]-->
 </body>
 </html>

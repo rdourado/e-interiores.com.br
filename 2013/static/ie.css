@@ -1,0 +1,34 @@
+#head { background: url(img/square.gif) repeat }
+.highlight {
+	background: url(img/square.gif) repeat;
+	background-position: 0 -134px;
+}
+.social-item a,
+.step-title b { background: url(img/ie/circle-26.png) no-repeat center center }
+.step-extra-1 {
+	background: url(img/ie/circle-43.png) no-repeat center center;
+	border: 0 none;
+	padding: 1px;
+}
+.step-extra-2 { background: url(img/ie/circle-140.png) no-repeat center center }
+.diff-extra-1 { background: url(img/ie/circle-49.png) no-repeat center center }
+.diff-extra-2 { border: 0 none }
+.diff-extra-3 {
+	background: url(img/ie/circle-250.png) no-repeat center center;
+	border: 0 none;
+	margin: 0 !important;
+	padding: 2px !important;
+}
+.instruction .number { background: url(img/ie/circle-44.png) no-repeat center center }
+.instruction,
+.entry-content .instruction {
+	background: url(img/ie/circle-224.png) no-repeat center center;
+	border: 0 none;
+	padding: 48px 37px 0;
+}
+.prod-extra {
+	background: url(img/ie/circle-130.png) no-repeat center center;
+	margin: 0 0 0 -65px !important;
+	padding: 0 !important;
+}
+.page-como-funciona .hide { display: block }

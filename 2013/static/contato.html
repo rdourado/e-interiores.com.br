@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<title>Contato | e-Interiores</title>
 	<link rel="stylesheet" href="style.css" media="screen">
+	<!--[if lt IE 9]><link rel="stylesheet" href="ie.css" media="screen">
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body class="page-contato">
 	<header id="head" class="cf">
-		<div id="logo"><a href="#"><img src="img/e-interiores.png" alt="e-Interiores" width="208" height="53"></a></div>
+		<div id="logo"><a href="index.html"><img src="img/e-interiores.png" alt="e-Interiores" width="208" height="53"></a></div>
 		<nav id="nav">
 			<ul id="menu">
 				<li class="menu-item"><a href="index.html">Home</a></li>
@@ -32,7 +34,30 @@
 		<article class="hentry">
 			<h1 class="entry-title">Contato</h1>
 			<div class="entry-content">
-				
+				<form action="" method="post" id="contactform">
+					<fieldset>
+						<legend>Contato</legend>
+						<p class="field field-nome cf">
+							<label for="nome">Nome</label><br>
+							<input type="text" name="nome" id="nome" class="text" autofocus required aria-required="true">
+						</p>
+						<p class="field field-email cf">
+							<label for="email">E-mail</label><br>
+							<input type="email" name="email" id="email" class="text" required aria-required="true">
+						</p>
+						<p class="field field-assunto cf">
+							<label for="assunto">Assunto</label><br>
+							<input type="text" name="assunto" id="assunto" class="text" required aria-required="true">
+						</p>
+						<p class="field field-mensagem cf">
+							<label for="mensagem">Mensagem</label><br>
+							<textarea name="" id="mensagem" cols="30" rows="10" class="area" required aria-required="true"></textarea>
+						</p>
+						<p class="submit">
+							<button type="submit" class="button">Enviar</button>
+						</p>
+					</fieldset>
+				</form>
 			</div>
 		</article>
 	</div>
@@ -46,7 +71,7 @@
 			<h4 class="foot-title">e-Interiores</h4>
 			<p class="foot-links">
 				<a href="#">Quem somos</a> | 
-				<a href="#">Entre em contato</a> | 
+				<a href="contato.html">Entre em contato</a> | 
 				<a href="#">Termos e condições de uso</a>
 			</p>
 		</nav>
