@@ -515,7 +515,7 @@ a {
 	margin: -7px 0 0 -7px;
 	padding: 7px;
 }
-.more-diff { width: 372px }
+.more-diff { width: 374px }
 .more-diff-1 { float: left }
 .more-diff-2 { float: right }
 .more-diff .diff-title {
@@ -849,6 +849,15 @@ label {
 .page-como-funciona .entry-content p,
 .page-diferenciais .entry-content ul 
 { margin-bottom: 0; }
+
+.diff-link-estilos {
+	display: block;
+	margin-top: 8px;
+	border-bottom: 1px dashed #ccc;
+	font-size: 13px;
+	color: black; 
+}
+.diff-link-estilos:hover { color: #ccc; }
 
 .more-diff,
 .more-diff .diff-title
