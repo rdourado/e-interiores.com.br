@@ -186,7 +186,7 @@ a {
 	background: url(img/bubbles.png) no-repeat, url(img/square.gif) repeat;
 	background-color: #c7c7c3;
 	background-position: 0 -134px, 0 -134px;
-	min-height: 425px;
+	max-height: 425px; /* alterado posteriormente - min-height: 425px; */
 }
 .highlight iframe {
 	display: block;
@@ -365,7 +365,7 @@ a {
 	background-size: cover;
 	height: 181px;
 }
-.entry-title {
+.entry-title { 
 	margin: 0 auto;
 	width: 960px;
 }
@@ -403,31 +403,32 @@ a {
 }
 .diff-contratacao {
 	left: 288px;
-	top: 0;
+	top: 26px; /* alterado posteriormente - top: 0 */
 }
 .diff-precos {
 	left: 0;
-	top: 143px;
+	top: 190px; /* alterado posteriormente - bottom: 143px; */
+	padding-top: 20px;
 }
 .diff-mini-site {
 	right: 0;
-	top: 143px;
+	top: 190px; /* alterado posteriormente - bottom: 143px; */
 }
 .diff-projeto {
 	left: 288px;
 	top: 288px;
 }
 .diff-suporte {
-	bottom: 143px;
+	bottom: 70px; /* alterado posteriormente - bottom: 143px; */
 	left: 0;
 }
 .diff-tutoriais {
-	bottom: 143px;
+	bottom: 70px; /* alterado posteriormente - bottom: 143px; */
 	right: 0;
 }
 .diff-questionario {
-	bottom: 0;
-	left: 288px;
+	bottom: 260px;
+	left: 258px;
 }
 .diff-icon {
 	display: block;
@@ -437,7 +438,7 @@ a {
 	z-index: 10;
 }
 .diff-mini-site .diff-icon,
-.diff-questionario .diff-icon { margin-left: 2px }
+.diff-questionario .diff-icon { margin-left: 14px } /* modificado posteriormente - margin-left: 2px */
 .diff-title,
 .diff-text {
 	position: relative;
@@ -514,7 +515,7 @@ a {
 	margin: -7px 0 0 -7px;
 	padding: 7px;
 }
-.more-diff { width: 360px }
+.more-diff { width: 372px }
 .more-diff-1 { float: left }
 .more-diff-2 { float: right }
 .more-diff .diff-title {
@@ -598,7 +599,7 @@ a {
 	border: 2px dashed #a7a9ac;
 	height: 176px;
 	list-style: none;
-	padding: 44px 35px 0;
+	padding: 40px 25px 0 44px;
 	position: absolute;
 	width: 150px;
 
@@ -826,3 +827,57 @@ label {
 				transform: rotate(360deg);
 	}
 }
+
+
+/************* Alterado posteriormente - maio 2013 *************/
+
+.entry-text { 
+	position: relative;	
+	left: -90px;
+	margin: 0 auto;
+	margin-bottom: 20px; 
+	width: 780px;
+	font-size: 15px;
+	color: #555;
+	line-height: 26px;
+}
+
+.page-quem-somos #body { min-height: 600px; }
+
+.page-como-funciona .entry-title, .page-como-funciona h2 { padding-bottom: 20px; }
+
+.page-como-funciona .entry-content p,
+.page-diferenciais .entry-content ul 
+{ margin-bottom: 0; }
+
+.more-diff,
+.more-diff .diff-title
+{ padding: 0; }
+
+.diff-suporte .diff-title { padding-top: 36px; }
+
+.diff-contratacao .diff-title { padding-top: 46px; }
+
+.diff-precos .diff-text { margin: 20px 30px; }
+
+.diff-mini-site .diff-title { padding-top: 60px; }
+.diff-mini-site .diff-icon { margin-left: 3px; }
+
+.diff-questionario { width: 220px; }
+.diff-questionario .diff-title { 
+	width: 240px;
+	padding-top: 36px;
+}
+.diff-questionario .diff-text { 
+	width: 220px;
+	margin-left: 48px; 
+}
+.diff-questionario .diff-extra-1 { left: 22px; }
+.diff-questionario .diff-extra-2 { left: 26px; }
+.diff-questionario .diff-extra-3 { padding: 30px;}
+.diff-questionario:hover .diff-extra-3 {
+	padding: 40px;
+	margin: -10px;
+}
+
+
